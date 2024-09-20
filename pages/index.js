@@ -36,26 +36,12 @@ export default function Home() {
       <header className="flex w-full p-5 justify-between text-sm text-gray-800">
         {/*left section*/}
         <div className="flex space-x-4 items-center font-Ubuntu">
-          <a href="https://about.google/?utm_source=google-IN&utm_medium=referral&utm_campaign=hp-footer&fg=1">
-            <p className="link">About</p>
-          </a>
-          <a href="https://chrome.google.com/webstore">
-            <p className="link">Webstore</p>
-          </a>
+          
         </div>
 
         {/*right section*/}
         <div className="flex space-x-4 font-Ubuntu items-center">
-          <a href="https://mail.google.com">
-            <p className="link">Gmail</p>
-          </a>
-          <a href="https://www.google.com/imghp?hl=en">
-            <p className="link">Images</p>
-          </a>
-
-          {/*Icons*/}
-          <ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" />
-
+         
           <a href="https://myaccount.google.com/?utm_source=OGB&tab=wk&utm_medium=act&pli=1">
             <Avatar url="https://i.pinimg.com/564x/de/6b/29/de6b295da4ff46c17e31688c5b274f8a.jpg" />
           </a>
