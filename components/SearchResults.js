@@ -1,6 +1,25 @@
 import PaginationButtons from "./PaginationButtons";
 import Footer from "./Footer";
+
 function SearchResults({ results }) {
+  const handleScrape = async (url) => {
+    try {
+      // Sending a POST request to the Next.js API route
+      const response = await fetch('/api/scrape', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ url }),
+      });
+
+      const data = await response.json();
+      console.log('Scraped content:', data.content);
+    } catch (error) {
+      console.error('Error during scraping:', error);
+    }
+  };
+
   return (
     <div>
       <div className="mx-auto w-full px-3 sm:pl-[5%] md:pl-[14%] lg:pl-52 font-OpenSans">
@@ -21,11 +40,15 @@ function SearchResults({ results }) {
               <a href={result.link}>
                 <h2
                   className="truncate 
-           text-xl text-blue-700 group-hover:underline font-OpenSans"
+                  text-xl text-blue-700 group-hover:underline font-OpenSans"
                 >
                   {result.title}
                 </h2>
               </a>
+              {/* Button to trigger scraping */}
+              <button onClick={() => handleScrape(result.link)}>
+                Scrape {result.link}
+              </button>
             </div>
             <p className="line-clamp-2 text-gray-900 font-OpenSans">
               {result.snippet}
@@ -40,8 +63,5 @@ function SearchResults({ results }) {
     </div>
   );
 }
-<div>
-  <Footer />
-</div>;
 
 export default SearchResults;
