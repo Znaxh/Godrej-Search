@@ -36,12 +36,26 @@ export default function Home() {
       <header className="flex w-full p-5 justify-between text-sm text-gray-800">
         {/*left section*/}
         <div className="flex space-x-4 items-center font-Ubuntu">
-          
+          <a href="https://about.google/?utm_source=google-IN&utm_medium=referral&utm_campaign=hp-footer&fg=1">
+            <p className="link">About</p>
+          </a>
+          <a href="https://chrome.google.com/webstore">
+            <p className="link">Webstore</p>
+          </a>
         </div>
 
         {/*right section*/}
         <div className="flex space-x-4 font-Ubuntu items-center">
-         
+          <a href="https://mail.google.com">
+            <p className="link">Gmail</p>
+          </a>
+          <a href="https://www.google.com/imghp?hl=en">
+            <p className="link">Images</p>
+          </a>
+
+          {/*Icons*/}
+          <ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" />
+
           <a href="https://myaccount.google.com/?utm_source=OGB&tab=wk&utm_medium=act&pli=1">
             <Avatar url="https://i.pinimg.com/564x/de/6b/29/de6b295da4ff46c17e31688c5b274f8a.jpg" />
           </a>
@@ -50,12 +64,13 @@ export default function Home() {
 
       {/*body*/}
       <form className="flex flex-col items-center pt-3 flex-grow w-4/5">
-      <Image
-  src="https://www.godrej.com/image/logo.png"
-  height={100}
-  width={200}
-  priority
-/>
+        <Image
+          src="https://i.imgur.com/IZuI2H9.gif"
+          height={207}
+          width={700}
+          priority
+        />
+
         <div
           className="flex w-full mt-5 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full
       border border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl"
@@ -69,14 +84,20 @@ export default function Home() {
           <MicrophoneIcon className="h-5" />
         </div>
         <div className="flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4 font-Ubuntu">
-          
+          <button onClick={search} className="btn">
+            Google Search
+          </button>
+
+          <button className="btn">
+            <a href="https://www.google.com/doodles"> I&apos;m Feeling Lucky</a>
+          </button>
         </div>
 
         <div className="flex link justify-center text-sm mt-7 pr-1 text-blue-700 items-center md:col-span-2 lg:col-span-1 lg:col-start-2 font-Ubuntu">
-          {" "}
-          <a href="https://www.godrej.com/">
+          <img src="google-account-security.png" className="h-5 px-1 "></img>{" "}
+          <a href="https://myaccount.google.com/security-checkup">
             {" "}
-            Visit the Godrej site and explore our products.{" "}
+            Take a 2 Minute Google Security Checkup.{" "}
           </a>
         </div>
       </form>
