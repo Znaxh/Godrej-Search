@@ -8,6 +8,6 @@ module.exports = {
 
 module.exports = {
   images: {
-    domains: ["i.imgur.com", "www.google.com"],
+    domains: ["i.imgur.com", "www.google.com", "www.godrej.com"],
   },
 };
